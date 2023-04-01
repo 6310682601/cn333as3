@@ -3,6 +3,7 @@ package com.example.multi_game
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -32,10 +33,11 @@ import com.example.multi_game.ui.theme.MultiGameTheme
 enum class Screen {
     Home, Number_Guessing_Game, Quiz_Game
 }
-//val QGViewModel: QGViewModel
-class MainActivity() : ComponentActivity() {
+
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val QGViewModel: QGViewModel by viewModels()
         setContent {
             MultiGameTheme {
                 Surface(
@@ -51,7 +53,7 @@ class MainActivity() : ComponentActivity() {
                             Number_Guessing_Game(name = "Number Guessing Game", navController = navController)
                         }
                         composable("Quiz Game") {
-//                            Quiz_Game(name = "Quiz Game", QGViewModel = QGViewModel, navController = navController)
+                            Quiz_Game(name = "Quiz Game", QGViewModel = QGViewModel, navController = navController)
                         }
                         composable("Game 3") {
 

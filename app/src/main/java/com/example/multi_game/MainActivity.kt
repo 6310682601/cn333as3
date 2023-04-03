@@ -21,6 +21,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -33,13 +35,14 @@ import com.example.multi_game.ui.Quiz_Game
 import com.example.multi_game.ui.theme.MultiGameTheme
 
 enum class Screen {
-    Home, Number_Guessing_Game, Quiz_Game
+    Home, Number_Guessing_Game, Quiz_Game, Adventure_Game
 }
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val QGViewModel: QGViewModel by viewModels()
+        val ADVViewModel: ADVViewModel by viewModels()
         setContent {
             MultiGameTheme {
                 Surface(
@@ -101,7 +104,7 @@ fun HomeScreen(navController: NavController, modifier: Modifier = Modifier) {
                 .padding(20.dp)
         ) {
             Text(
-                "Game 3",
+                "Adventure Game",
                 fontSize = 20.sp)
         }
     }

@@ -49,7 +49,7 @@ fun Adventure_Game(
                 .background(color = Color(0xFF4A148C))
         ) {
             Text(
-                text = "Adventure Game",
+                text = name,
                 fontSize = 20.sp,
                 color = Color.White,
                 modifier = Modifier.padding(12.dp)
@@ -85,6 +85,13 @@ fun Adventure_Game(
             Text(
                 text = choice[1],
                 fontSize = 20.sp)
+        }
+
+        Button(onClick = { navController.popBackStack() }) {
+            Text(
+                text = "Go Back",
+                fontSize = 20.sp
+            )
         }
 
         if (gameUiState.ending == 1) {

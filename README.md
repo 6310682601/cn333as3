@@ -1,4 +1,5 @@
-# cn333as1
+# cn333as3
+# Android App: Multi Game
 แอพนี้จะเป็นมีเกมย่อยทั้งหมด 3 เกม
 ## Android App: Number Guessing game
 - แอพจะสุ่มเลขขึ้นมา 1 เลข ให้ผู้เล่นทาย

@@ -1,5 +1,6 @@
 package com.example.multi_game
 
+import Adventure_Game
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.adventure_game.ui.ADVViewModel
 //import com.example.multi_game.ui.NGGViewModel
 import com.example.multi_game.ui.QGViewModel
 import com.example.multi_game.ui.Quiz_Game
@@ -55,8 +57,8 @@ class MainActivity : ComponentActivity() {
                         composable("Quiz Game") {
                             Quiz_Game(name = "Quiz Game", QGViewModel = QGViewModel, navController = navController)
                         }
-                        composable("Game 3") {
-
+                        composable("Adventure Game") {
+                            Adventure_Game(name = "Adventure Game", ADVViewModel = ADVViewModel, navController = navController)
                         }
                     }
                 }

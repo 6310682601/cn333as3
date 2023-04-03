@@ -98,7 +98,7 @@ fun HomeScreen(navController: NavController, modifier: Modifier = Modifier) {
                 "Quiz Game",
                 fontSize = 20.sp)
         }
-        Button(onClick = { navController.navigate("Game 3") },
+        Button(onClick = { navController.navigate("Adventure Game") },
             modifier = modifier
                 .fillMaxWidth()
                 .padding(20.dp)
